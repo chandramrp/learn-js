@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Manipulasi Element</title>
+        <style>
+            .bgred{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>title</h1>
+            <p id="paragraph">ini teks</p>
+        </div>
+
+        <ul>
+            <li id="item">item ke 1</li>
+            <li>item ke 2</li>
+            <li>item ke 3</li>
+        </ul>
+
+        <script>
+            // const paragrap = document.getElementById("paragraph")
+            // paragrap.textContent = "ini paragraf dengan text content"
+            // const item = document.getElementById("item")
+            // item.innerHTML="item baru dengan inner html"
+            const box = document.getElementById("container")
+            // console.log(box.textContent)
+            // box.textContent = "<h1>asasdfsfs<h1>""
+                // box.innerHTML = "<h1>asasdfsfs<h1>" 
+            // console.log(box)
+
+            // manipulasi attribute
+            const paragraph = document.getElementById("paragraph")
+            console.log(paragraph)
+            paragraph.setAttribute("class", "bgred")
+
+            // manipulasi style
+            const li = document.querySelectorAll("li")
+            li[0].style.background = "blue"
+        </script>
+    </body>
+</html>

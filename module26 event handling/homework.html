@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="input" placeholder="masukan nama" />
+        <button id="button">tambah</button>
+        <ul id="list"></ul>
+
+        <script>
+            const input = document.getElementById("input");
+            const button = document.getElementById("button");
+            const list = document.getElementById("list");
+
+            function hapusButton() {
+                
+            }
+
+			let nomorList = 0
+            button.addEventListener("click", () => {
+                const newItem = document.createElement("li");
+                newItem.setAttribute("id", `${nomorList++}`);
+                newItem.textContent = input.value;
+                const hapusButton = document.createElement("button");
+                hapusButton.setAttribute("onclick", `hapusButton()`);
+                hapusButton.textContent = "hapus";
+                list.appendChild(newItem);
+                newItem.appendChild(hapusButton);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button onclick="getClick()">click</button>
+        <button id="button">submit</button>
+        <p id="teks">ini teks</p>
+        <script>
+            // function getClick(){
+            //     alert("Clicked!!")
+            // }
+
+            // const button = document.getElementById("button")
+            // button.addEventListener("click", ()=>{
+            // alert("submitted")
+            // })
+
+            // button.addEventListener("mouseout", ()=>{
+            //     alert("mouse out")
+            // })
+
+            const teks = document.getElementById("teks");
+            function getClick() {
+                teks.style.backgroundColor = "red ";
+            }
+
+            teks.addEventListener("mouseover", () => {
+                teks.style.color = "white";
+            });
+            teks.addEventListener("mouseout", () => {
+                teks.style.color = "white";
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM Menambah Menghapus Element</title>
+    </head>
+    <body>
+        <h1 id="title">Menambah dan menghapus element</h1>
+
+        <ul id="list">
+            <li>item 1</li>
+            <li id="item-2">item 2</li>
+            <li>item 3</li>
+        </ul>
+
+        <script>
+            const newDiv = document.createElement("div");
+            newDiv.textContent = "ini dibuat dengan menggunakan script";
+            document.body.appendChild(newDiv)
+            const title = document.getElementById("title");
+            document.body.insertBefore(newDiv, title);
+
+            const newLi = document.createElement("li");
+            newLi.textContent = "item baru dibuat dengan script";
+            const parents = document.getElementById("list");
+			const item2 = document.getElementById("item-2")
+			parents.insertBefore(newLi, item2)
+            // parents.appendChild(newLi);
+
+			// document.body.removeChild(title)
+			// parents.removeChild(item2)
+			title.remove()
+			// document.body.remove()
+        </script>
+    </body>
+</html>
